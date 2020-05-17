@@ -2,7 +2,7 @@
 
 This a template based on [stephen's android template](https://github.com/swbain/stephens-android-template) to bootstrap android development using MVVM and Kotlin Coroutines. Dependencies will change as my personal preferences do.
 
-## Current stack:
+## Current stack
 + kotlin
 + junit
 + [mockk](https://mockk.io/)
