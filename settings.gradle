@@ -1,2 +1,2 @@
-rootProject.name='android template'
+rootProject.name='mvvm android template'
 include ':app'
