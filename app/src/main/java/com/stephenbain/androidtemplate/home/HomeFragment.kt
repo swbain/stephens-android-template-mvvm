@@ -1,19 +1,23 @@
 package com.stephenbain.androidtemplate.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.lifecycle.observe
 import com.stephenbain.androidtemplate.R
-import dagger.android.support.DaggerFragment
+import com.stephenbain.androidtemplate.common.BaseFragment
+import kotlinx.android.synthetic.main.fragment_home.*
 
-class HomeFragment : DaggerFragment() {
+class HomeFragment : BaseFragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    override val layoutId: Int
+        get() = R.layout.fragment_home
+
+    private val viewModel by getViewModel<HomeViewModel>()
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            text.text = state.text
+        }
     }
 }

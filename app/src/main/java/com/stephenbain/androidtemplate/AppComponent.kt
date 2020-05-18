@@ -1,5 +1,6 @@
 package com.stephenbain.androidtemplate
 
+import com.stephenbain.androidtemplate.common.VmProviderModule
 import com.stephenbain.androidtemplate.home.HomeModule
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -8,7 +9,11 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-    modules = [AndroidSupportInjectionModule::class, HomeModule::class]
+    modules = [
+        AndroidSupportInjectionModule::class,
+        HomeModule::class,
+        VmProviderModule::class
+    ]
 )
 interface AppComponent : AndroidInjector<MyApplication> {
     @Component.Factory
