@@ -3,7 +3,7 @@
 This a template based on [stephen's android template](https://github.com/swbain/stephens-android-template) to bootstrap android development using MVVM and Kotlin Coroutines. Dependencies will change as my personal preferences do.
 
 #### Current stack
-+ kotlin
++ kotlin + coroutines
 + junit
 + [mockk](https://mockk.io/)
 + [androidx](https://developer.android.com/jetpack/androidx)
@@ -13,6 +13,7 @@ This a template based on [stephen's android template](https://github.com/swbain/
   - androidx.constraintlayout
   - androidx.navigation
   - androidx.test
+  - androidx.lifecycle
 + [material components](https://github.com/material-components/material-components-android)
 + [timber](https://github.com/JakeWharton/timber)
 + [dagger 2](https://dagger.dev/) + [dagger-android](https://dagger.dev/dev-guide/android)
